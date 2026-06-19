@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ロハスカンパニー株式会社 Webサイトリニューアル ワイヤーフレーム</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --base:#eef1f5; --paper:#ffffff; --line:#d3dae3; --line2:#c0c9d4;
+    --text:#1f262e; --sub:#6b7682; --navy:#13314f; --brass:#c08a3e; --steel:#3e6694;
+    --box:#e3e8ee; --boxline:#cdd5df;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Noto Sans JP",system-ui,sans-serif;color:var(--text);background:var(--base);line-height:1.75;}
+  a{color:inherit;text-decoration:none}
+  .container{width:min(1180px,92%);margin:0 auto}
+
+  /* ===== WF注記・凡例 ===== */
+  .wf-meta{background:#fff8ec;border-bottom:2px solid var(--brass);padding:24px 0;}
+  .wf-meta h1{font-size:20px;color:var(--navy);margin-bottom:6px}
+  .wf-meta .tag{display:inline-block;font-size:11px;font-weight:700;color:#fff;background:var(--brass);padding:2px 10px;border-radius:4px;margin-right:8px}
+  .memo-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px 24px;margin-top:14px;font-size:13px}
+  .memo-grid dt{font-weight:700;color:var(--navy)}
+  .memo-grid dd{color:var(--text);margin-bottom:6px}
+  .legend{margin-top:14px;font-size:12px;color:var(--sub);border-top:1px dashed var(--line2);padding-top:10px}
+
+  /* 設計意図ノート */
+  .note{background:#f0f4f9;border-left:4px solid var(--steel);padding:10px 16px;margin-bottom:18px;font-size:13px;color:#33414f}
+  .note b{color:var(--navy)}
+
+  /* wire-box */
+  .wire-box{background:var(--box);border:1px solid var(--boxline);border-radius:10px;min-height:150px;display:grid;place-items:center;color:#7a8694;font-size:13px;font-weight:600;text-align:center;padding:14px}
+  .ph{color:#8a96a3;font-weight:400}
+
+  /* section common */
+  .section{padding:64px 0;border-bottom:1px dashed var(--line2)}
+  .secnum{display:inline-block;font-size:12px;font-weight:700;color:var(--brass);letter-spacing:.12em}
+  .section-head .en{color:var(--steel);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+  .section-head h2{font-size:clamp(22px,3.4vw,32px);color:var(--navy);margin:4px 0 8px}
+  .section-head p{color:var(--sub);font-size:14px;max-width:680px;margin-bottom:26px}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 22px;border-radius:6px;background:var(--navy);color:#fff;font-weight:700;font-size:14px}
+  .btn.brass{background:var(--brass)}
+  .btn.ghost{background:#fff;color:var(--navy);border:1px solid var(--navy)}
+
+  /* header */
+  .header{background:rgba(255,255,255,.97);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50}
+  .header-inner{height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+  .logo{font-weight:900;color:var(--navy);font-size:18px;letter-spacing:.02em}
+  .logo span{display:block;font-size:10px;color:var(--sub);font-weight:500;letter-spacing:.1em}
+  .gnav{display:flex;gap:22px;font-size:13px;font-weight:700;color:var(--text)}
+  .gnav .en{display:block;font-size:9px;color:var(--steel);font-weight:700}
+  .head-cta{display:flex;gap:10px;align-items:center}
+  .tel{font-size:12px;color:var(--navy);font-weight:700;text-align:right;line-height:1.3}
+  .tel b{font-size:18px}
+
+  /* HERO type D : 非対称グリッド */
+  .hero{padding:34px 0 56px}
+  .hero-grid{display:grid;grid-template-columns:1.35fr 1fr;grid-template-rows:auto auto;gap:14px}
+  .hero-main{grid-row:1 / span 2;background:linear-gradient(135deg,#13314f,#1c4068);color:#fff;border-radius:14px;padding:48px 40px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
+  .hero-main:before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--steel) 1px,transparent 1px),linear-gradient(90deg,var(--steel) 1px,transparent 1px);background-size:38px 38px;opacity:.12}
+  .hero-main .en{position:relative;font-size:12px;letter-spacing:.2em;color:#bcd0e6;font-weight:700}
+  .hero-main h2{position:relative;font-size:clamp(28px,4vw,44px);line-height:1.35;margin:14px 0 18px;font-weight:900}
+  .hero-main .keyline{position:relative;width:64px;height:3px;background:var(--brass);margin-bottom:18px}
+  .hero-main p{position:relative;font-size:14px;color:#dbe5f0;max-width:440px;margin-bottom:24px}
+  .hero-main .herobtns{position:relative;display:flex;gap:12px;flex-wrap:wrap}
+  .hero-tile{background:var(--box);border:1px solid var(--boxline);border-radius:14px;display:grid;place-items:center;color:#7a8694;font-size:13px;font-weight:600;text-align:center;padding:18px;min-height:120px}
+  .hero-tile.stat{background:#fff;border-color:var(--line)}
+  .hero-tile.entry{background:#fbf4e9;border-color:#e7d3b2;color:var(--navy)}
+  .hero-tile small{display:block;font-size:11px;color:var(--sub);font-weight:500;margin-top:4px}
+
+  /* 3カラム/グリッド汎用 */
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:20px}
+  .card .no{font-family:monospace;font-size:13px;color:var(--brass);font-weight:700;letter-spacing:.1em}
+  .card h3{color:var(--navy);font-size:17px;margin:6px 0 10px}
+  .card .wire-box{min-height:110px;margin-bottom:12px}
+  .stat-num{font-size:34px;font-weight:900;color:var(--navy);line-height:1.1}
+  .stat-num small{font-size:14px;color:var(--brass);font-weight:700}
+
+  /* 品質フロー */
+  .flow{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;align-items:stretch}
+  .flow .step{background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px;font-size:13px;text-align:center;position:relative}
+  .flow .step .no{color:var(--brass);font-family:monospace;font-weight:700;display:block;margin-bottom:4px}
+
+  /* topics */
+  .topics li{display:flex;gap:18px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px 18px;margin-bottom:10px;list-style:none;font-size:14px}
+  .topics .date{color:var(--steel);font-weight:700;font-size:13px;white-space:nowrap}
+  .topics .cat{font-size:11px;border:1px solid var(--steel);color:var(--steel);border-radius:4px;padding:1px 8px;white-space:nowrap}
+
+  /* 採用バナー */
+  .recruit{background:linear-gradient(135deg,#1c4068,#13314f);border-radius:14px;color:#fff;padding:40px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+  .recruit h3{font-size:24px;margin-bottom:6px}
+  .recruit p{color:#cfdcea;font-size:14px}
+
+  /* CTA帯 */
+  .cta{background:var(--brass);color:#fff;text-align:center;padding:48px 20px}
+  .cta h3{font-size:26px;margin-bottom:8px}
+  .cta .tel-big{font-size:34px;font-weight:900;margin:10px 0}
+  .cta .btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:14px}
+  .cta .btn{background:#fff;color:var(--navy)}
+
+  /* footer */
+  .footer{background:var(--navy);color:#cdd8e4;padding:54px 0 26px}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px}
+  .footer h4{color:#fff;font-size:14px;margin-bottom:12px;border-bottom:1px solid #2d4a68;padding-bottom:8px}
+  .footer ul{list-style:none;font-size:13px}
+  .footer li{margin-bottom:7px;color:#aebfd0}
+  .footer .copy{margin-top:30px;border-top:1px solid #2d4a68;padding-top:16px;font-size:12px;color:#8ea2b8}
+
+  /* SP frame */
+  .sp-wrap{background:#dfe5ec;padding:48px 0}
+  .sp-frame{width:390px;max-width:92%;margin:0 auto;background:#fff;border:10px solid #13314f;border-radius:28px;overflow:hidden}
+  .sp-frame .sp-sec{padding:18px 16px;border-bottom:1px dashed var(--line2)}
+  .sp-frame .wire-box{min-height:90px}
+  .sp-hero{background:linear-gradient(135deg,#13314f,#1c4068);color:#fff;padding:26px 16px}
+  .sp-hero .keyline{width:48px;height:3px;background:var(--brass);margin:8px 0}
+  .sp-hero h2{font-size:22px;line-height:1.4;font-weight:900}
+  .sp-burger{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;border-bottom:1px solid var(--line)}
+  .sp-burger .logo{font-size:14px}
+  .sp-label{font-size:11px;color:var(--brass);font-weight:700;letter-spacing:.1em}
+
+  @media(max-width:980px){
+    .hero-grid{grid-template-columns:1fr 1fr}
+    .hero-main{grid-row:auto;grid-column:1 / -1}
+    .grid3{grid-template-columns:1fr}
+    .grid4{grid-template-columns:repeat(2,1fr)}
+    .flow{grid-template-columns:1fr 1fr}
+    .foot-grid{grid-template-columns:1fr 1fr}
+    .gnav,.head-cta .tel{display:none}
+    .memo-grid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== WFメタ：要件メモ ===== -->
+<div class="wf-meta">
+  <div class="container">
+    <span class="tag">WIREFRAME v2</span><span class="tag" style="background:var(--navy)">PC / SP</span>
+    <h1>ロハスカンパニー株式会社 Webサイトリニューアル ／ ワイヤーフレーム</h1>
+    <div style="font-size:12px;color:var(--sub)">ワイヤーフレーム課作成・2026-06-18 ／ 企画書「現場の確かさと、変わらぬ信頼。」＝ヒーロー型 <b>D：非対称グリッド</b>・配色 紺×ブラス・装飾モチーフ=モジュラーグリッドを骨格に反映</div>
+    <dl class="memo-grid">
+      <div><dt>現サイト</dt><dd>https://www.lohas-company.com/（WordPress運用想定）</dd></div>
+      <div><dt>事業</dt><dd>ビルメンテナンス／清掃管理・衛生管理・設備管理（東京都中央区銀座・設立2007）</dd></div>
+      <div><dt>クライアント要望</dt><dd>①現行カラー＝<b>紺/ブルー系</b>を踏襲 ②BtoB施設管理の<b>信頼感</b> ③過去案件と違う<b>新鮮な構成</b> ④下層ページまで作成</dd></div>
+      <div><dt>トンマナ参照</dt><dd>イオンディライト／日本管財（BtoB信頼骨格）・進藤組（現場系硬派）。紹介元=帝国データバンク＝信頼第一</dd></div>
+    </dl>
+    <div class="legend">凡例： グレー枠 <span class="ph">= 画像/写真の未確定要素（wire-box）</span> ／ 本文プレースホルダは「テキストが入ります。」で統一 ／ 設計意図は青帯ノートに記載 ／ 配色（紺#13314F・ブラス#C08A3E）は方向性提示でデザイン課が確定。</div>
+  </div>
+</div>
+
+<!-- ===== HEADER ===== -->
+<header class="header">
+  <div class="container header-inner">
+    <div class="logo">LOHAS COMPANY<span>ロハスカンパニー株式会社</span></div>
+    <nav class="gnav">
+      <a href="#"><span class="en">SERVICE</span>業務内容</a>
+      <a href="#"><span class="en">QUALITY</span>管理品質</a>
+      <a href="#"><span class="en">COMPANY</span>会社情報</a>
+      <a href="#"><span class="en">RECRUIT</span>採用情報</a>
+      <a href="#"><span class="en">CONTACT</span>お問い合わせ</a>
+    </nav>
+    <div class="head-cta">
+      <div class="tel">お電話でのご相談<br><b>03-0000-0000</b></div>
+      <a class="btn brass" href="#">お問い合わせ</a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== HERO ：型D 非対称グリッド ===== -->
+<section class="hero">
+  <div class="container">
+    <div class="note"><b>設計意図｜なぜ型D（非対称グリッド）か：</b>前案の「全面写真＋オーバーレイ（型B）」を刷新。建物のフロア・区画を想起させる<b>整然としたブロック割</b>で「体系的に管理する会社」を一目で伝える。大きな紺ブロックに主訴求、右に3業務への入口・実績数値・空間写真タイルを格子状に配置し、単一の汎用大写真に依存せず個性を出す。</div>
+    <div class="hero-grid">
+      <div class="hero-main">
+        <span class="en">FACILITY MANAGEMENT SINCE 2007</span>
+        <h2>現場の確かさと、<br>変わらぬ信頼。</h2>
+        <div class="keyline"></div>
+        <p>テキストが入ります。建物を清潔・安全・快適に保ち続ける。清掃・衛生・設備の3つの管理で、施設の価値を守ります。</p>
+        <div class="herobtns">
+          <a class="btn brass" href="#">業務内容を見る</a>
+          <a class="btn" style="background:transparent;color:#fff;border:1px solid #fff" href="#">無料相談する</a>
+        </div>
+      </div>
+      <div class="hero-tile entry">清掃 / 衛生 / 設備<small>3業務への入口タイル</small></div>
+      <div class="hero-tile stat"><div><span class="stat-num">3<small>領域</small></span><small>清掃・衛生・設備の総合管理</small></div></div>
+      <div class="hero-tile" style="grid-column:span 2">管理された空間の写真（小タイル）<br><span class="ph">MV07 / MV03 等から1枚・全面非依存</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 01 選ばれる理由 ===== -->
+<section class="section">
+  <div class="container">
+    <div class="note"><b>設計意図｜なぜ最初に「選ばれる理由」か：</b>BtoB施設管理の意思決定は<b>「まず信頼」</b>から始まる。サービス説明の前に、発注して安心できる根拠（3つの管理姿勢）を先出しして離脱を防ぐ。定番の「強み羅列」ではなく“約束”として提示。</div>
+    <div class="section-head"><span class="secnum">01</span><div class="en">OUR PROMISE</div><h2>私たちが選ばれる、3つの管理姿勢</h2><p>テキストが入ります。信頼の根拠を先に示す。</p></div>
+    <div class="grid3">
+      <div class="card"><span class="no">01</span><h3>見出しが入ります</h3><div class="wire-box">アイコン/図 <span class="ph">(CSS図形)</span></div><p>テキストが入ります。テキストが入ります。</p></div>
+      <div class="card"><span class="no">02</span><h3>見出しが入ります</h3><div class="wire-box">アイコン/図 <span class="ph">(CSS図形)</span></div><p>テキストが入ります。テキストが入ります。</p></div>
+      <div class="card"><span class="no">03</span><h3>見出しが入ります</h3><div class="wire-box">アイコン/図 <span class="ph">(CSS図形)</span></div><p>テキストが入ります。テキストが入ります。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 02 事業領域 3業務 ===== -->
+<section class="section">
+  <div class="container">
+    <div class="note"><b>設計意図｜なぜ次に事業領域か：</b>信頼を受けて「何を頼めるか（領域理解）」へ。清掃01/衛生02/設備03を<b>ナンバリングのグリッドカード</b>で規律的に並べ、装飾モチーフ（区画グリッド）と一貫させる。各カードから下層「サービス詳細」へ遷移。</div>
+    <div class="section-head"><span class="secnum">02</span><div class="en">SERVICE</div><h2>事業領域 ― 3つの管理</h2><p>清掃管理／衛生管理／設備管理。各詳細ページへ。</p></div>
+    <div class="grid3">
+      <div class="card"><span class="no">01 CLEANING</span><h3>清掃管理業務</h3><div class="wire-box">現場写真 <span class="ph">(実写差し替え)</span></div><p>テキストが入ります。日常清掃・定期清掃 等。</p><a class="btn ghost" href="#">詳細を見る ▸</a></div>
+      <div class="card"><span class="no">02 SANITATION</span><h3>衛生管理業務</h3><div class="wire-box">現場写真 <span class="ph">(実写差し替え)</span></div><p>テキストが入ります。衛生用品・環境衛生 等。</p><a class="btn ghost" href="#">詳細を見る ▸</a></div>
+      <div class="card"><span class="no">03 FACILITY</span><h3>設備管理業務</h3><div class="wire-box">現場写真 <span class="ph">(実写差し替え)</span></div><p>テキストが入ります。点検・保守・運転監視 等。</p><a class="btn ghost" href="#">詳細を見る ▸</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 03 対応施設・実績 ===== -->
+<section class="section">
+  <div class="container">
+    <div class="note"><b>設計意図｜なぜここで実績・数値か：</b>領域理解の直後に<b>実務の裏付け</b>を数値と対応施設タイプで示し、現行サイトの「更新停止・実績不明」感を払拭。抽象的な訴求を“数字”で信頼に変換する。</div>
+    <div class="section-head"><span class="secnum">03</span><div class="en">RESULTS</div><h2>対応施設・実績</h2><p>数値と施設タイプで実務を可視化。</p></div>
+    <div class="grid4" style="margin-bottom:18px">
+      <div class="card" style="text-align:center"><span class="stat-num">00<small>年</small></span><p>稼働実績</p></div>
+      <div class="card" style="text-align:center"><span class="stat-num">000<small>件</small></span><p>管理物件数</p></div>
+      <div class="card" style="text-align:center"><span class="stat-num">00<small>%</small></span><p>継続契約率</p></div>
+      <div class="card" style="text-align:center"><span class="stat-num">00<small>h</small></span><p>緊急対応体制</p></div>
+    </div>
+    <div class="grid3">
+      <div class="wire-box">対応施設タイプ写真<span class="ph"><br>オフィスビル</span></div>
+      <div class="wire-box">対応施設タイプ写真<span class="ph"><br>商業施設</span></div>
+      <div class="wire-box">対応施設タイプ写真<span class="ph"><br>医療・公共 等</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 04 管理品質へのこだわり ===== -->
+<section class="section">
+  <div class="container">
+    <div class="note"><b>設計意図｜なぜ品質フローを置くか：</b>ビルメンの価値は“見えない仕事”。点検〜報告の<b>管理フローを可視化</b>することで、堅実さ＝差別化を伝える。型D／グリッドの世界観をフロー図でも反復。</div>
+    <div class="section-head"><span class="secnum">04</span><div class="en">QUALITY</div><h2>管理品質へのこだわり</h2><p>点検から報告まで、体系化された管理フロー。</p></div>
+    <div class="flow">
+      <div class="step"><span class="no">STEP 01</span>現地調査・診断</div>
+      <div class="step"><span class="no">STEP 02</span>管理計画の策定</div>
+      <div class="step"><span class="no">STEP 03</span>定期点検・清掃</div>
+      <div class="step"><span class="no">STEP 04</span>記録・報告</div>
+      <div class="step"><span class="no">STEP 05</span>改善提案</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 05 お知らせ Topics ===== -->
+<section class="section">
+  <div class="container">
+    <div class="note"><b>設計意図｜なぜ後半にTopicsか：</b>更新導線を明示し<b>「継続的に運用されている会社」</b>の印象を作る（現行=2021年1件のみの放置感を解消）。意思決定の主訴求の後、補助情報として配置。</div>
+    <div class="section-head"><span class="secnum">05</span><div class="en">NEWS</div><h2>お知らせ</h2></div>
+    <ul class="topics">
+      <li><span class="date">2026.00.00</span><span class="cat">お知らせ</span><span>テキストが入ります。最新のお知らせ見出し。</span></li>
+      <li><span class="date">2026.00.00</span><span class="cat">実績</span><span>テキストが入ります。新規受託のお知らせ。</span></li>
+      <li><span class="date">2026.00.00</span><span class="cat">採用</span><span>テキストが入ります。採用に関するお知らせ。</span></li>
+    </ul>
+    <div style="text-align:center;margin-top:14px"><a class="btn ghost" href="#">お知らせ一覧 ▸</a></div>
+  </div>
+</section>
+
+<!-- ===== 06 採用バナー ===== -->
+<section class="section">
+  <div class="container">
+    <div class="note"><b>設計意図｜なぜ採用を独立バナーにするか：</b>ビルメンは<b>「人＝品質の源泉」</b>。現行の機能不全（募集なし表示のみ）を解消し、採用広報への明確な入口を設ける。CTA直前に置き“働く人の信頼”へ橋渡し。</div>
+    <div class="recruit">
+      <div><div class="sp-label">RECRUIT</div><h3>人が、品質をつくる。</h3><p>テキストが入ります。採用情報・先輩の声・募集要項へ。</p></div>
+      <a class="btn brass" href="#">採用情報を見る</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 07 CTA帯 ===== -->
+<section style="padding:0">
+  <div class="note container" style="margin:40px auto 0"><b>設計意図｜なぜ最後にCTA帯（フルワイド）か：</b>BtoBは電話相談が主導線。ページ末尾で<b>電話＋フォーム</b>を強く提示し相談へ着地。ブラスのフルワイド帯で視線を集約。</div>
+  <div class="cta">
+    <div class="container">
+      <h3>施設管理のご相談は、お気軽に。</h3>
+      <p>テキストが入ります。お見積り・現地調査は無料です。</p>
+      <div class="tel-big">03-0000-0000</div>
+      <div class="btns"><a class="btn" href="#">お問い合わせフォーム</a><a class="btn" href="#">資料請求</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER：サイトマップ全展開 ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="note" style="background:#1c4068;border-color:#3e6694;color:#cdd8e4;margin-bottom:24px"><b style="color:#fff">設計意図｜フッター=サイトマップ全展開：</b>下層ページの網羅性と回遊性を担保（CLAUDE.md WF型に準拠）。</div>
+    <div class="foot-grid">
+      <div>
+        <div class="logo" style="color:#fff">LOHAS COMPANY</div>
+        <p style="font-size:12px;color:#aebfd0;margin-top:10px">ロハスカンパニー株式会社<br>東京都中央区銀座 ○-○-○</p>
+      </div>
+      <div><h4>業務内容</h4><ul><li>清掃管理業務</li><li>衛生管理業務</li><li>設備管理業務</li><li>管理品質について</li></ul></div>
+      <div><h4>会社情報</h4><ul><li>代表メッセージ</li><li>会社概要</li><li>沿革</li><li>アクセス</li></ul></div>
+      <div><h4>その他</h4><ul><li>採用情報</li><li>お知らせ</li><li>お問い合わせ</li><li>個人情報保護方針</li></ul></div>
+    </div>
+    <div class="copy">© 2026 LOHAS COMPANY Co., Ltd. ／ <span class="ph">著作権表記は当年に更新（現行2021年のまま問題を解消）</span></div>
+  </div>
+</footer>
+
+<!-- ===== SP（スマートフォン）ワイヤー ===== -->
+<div class="sp-wrap">
+  <div class="container">
+    <div class="section-head" style="text-align:center"><div class="en">SMARTPHONE</div><h2>SP（375〜390px）ワイヤー</h2><p style="margin:0 auto">縦積み・ハンバーガーメニュー・電話固定CTAを基本に、型Dグリッドは1カラムへ再構成。</p></div>
+  </div>
+  <div class="sp-frame">
+    <div class="sp-burger"><div class="logo" style="color:var(--navy)">LOHAS COMPANY</div><div style="font-size:22px;color:var(--navy)">☰</div></div>
+    <div class="sp-hero">
+      <div class="sp-label" style="color:#bcd0e6">SINCE 2007</div>
+      <h2>現場の確かさと、変わらぬ信頼。</h2>
+      <div class="keyline"></div>
+      <p style="font-size:13px;color:#dbe5f0">テキストが入ります。</p>
+      <a class="btn brass" style="margin-top:10px;width:100%" href="#">業務内容を見る</a>
+    </div>
+    <div class="sp-sec"><div class="sp-label">01 OUR PROMISE</div><p style="font-size:13px">選ばれる3つの管理姿勢（縦積みカード）</p><div class="wire-box">card 01</div><div class="wire-box" style="margin-top:8px">card 02</div></div>
+    <div class="sp-sec"><div class="sp-label">02 SERVICE</div><p style="font-size:13px">3業務（清掃/衛生/設備）縦積み</p><div class="wire-box">清掃管理 ▸</div></div>
+    <div class="sp-sec"><div class="sp-label">03 RESULTS</div><div class="wire-box">数値カウンター（2列）</div></div>
+    <div class="sp-sec"><div class="sp-label">04 QUALITY</div><div class="wire-box">管理フロー（縦ステップ）</div></div>
+    <div class="sp-sec"><div class="sp-label">05 NEWS</div><div class="wire-box" style="min-height:60px">お知らせリスト</div></div>
+    <div class="sp-sec" style="background:var(--brass);color:#fff;text-align:center"><b>03-0000-0000</b><br><span style="font-size:12px">下部に電話CTAを固定表示</span></div>
+  </div>
+</div>
+
+</body>
+</html>

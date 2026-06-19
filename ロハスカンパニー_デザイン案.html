@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ロハスカンパニー株式会社｜ビルメンテナンス（清掃・衛生・設備管理）</title>
+<meta name="description" content="現場の確かさと、変わらぬ信頼。ロハスカンパニー株式会社は清掃管理・衛生管理・設備管理の総合ビルメンテナンスで、建物の価値を守り続けます。東京都中央区銀座。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700;800&family=Murecho:wght@300;400;500;600&family=IBM+Plex+Sans+JP:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#1f73c7; --blue-d:#0f4f8c; --blue-l:#5aa0e0; --sky:#e9f3fc; --sky2:#f3f9fe;
+  --navy:#122c47; --gold:#caa83f; --gold-d:#9c7c20; --gold-l:#ecd9a0;
+  --paper:#f6faff; --white:#fff; --ink:#1d2b3a; --sub:#5e6c7a; --line:#e1eaf3; --mist:#b8c6d6;
+  --mincho:"Shippori Mincho",serif; --sans:"IBM Plex Sans JP",sans-serif; --body:"Murecho",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);color:var(--ink);background:var(--white);line-height:1.9;font-size:15px;font-weight:400;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,h4{font-family:var(--mincho);font-weight:700;line-height:1.42;letter-spacing:.02em}
+a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
+.container{width:min(1200px,92%);margin:0 auto}
+.fig{font-family:var(--mincho);font-weight:600;font-feature-settings:"palt"}
+.eyebrow{font-family:var(--sans);font-size:12.5px;font-weight:600;letter-spacing:.26em;color:var(--blue);text-transform:uppercase;display:inline-flex;align-items:center;gap:13px}
+.eyebrow::before{content:"";width:32px;height:1px;background:var(--blue)}
+.sec-title{font-family:var(--mincho);font-weight:700;font-size:clamp(27px,3.8vw,42px);color:var(--blue-d);margin:18px 0 16px;letter-spacing:.04em}
+.lead{color:var(--sub);max-width:680px;font-size:15px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:54px;padding:0 32px;border-radius:2px;font-family:var(--sans);font-weight:600;font-size:14.5px;letter-spacing:.04em;transition:.25s;cursor:pointer;border:1px solid transparent}
+.btn.blue{background:var(--blue);color:#fff;box-shadow:0 12px 26px -12px rgba(31,115,199,.7)}.btn.blue:hover{background:var(--blue-d);transform:translateY(-2px)}
+.btn.gold{background:var(--gold);color:#fff}.btn.gold:hover{background:var(--gold-d);transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--blue-d);border-color:var(--blue)}.btn.ghost:hover{background:var(--blue);color:#fff}
+.btn.line-b{background:transparent;color:var(--blue-d);border-color:var(--mist)}.btn.line-b:hover{border-color:var(--blue);background:var(--sky)}
+
+/* header */
+.header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.header-in{height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand img{height:40px;width:auto}
+.gnav{display:flex;gap:30px;align-items:center}
+.gnav a{font-family:var(--sans);font-weight:600;font-size:14px;position:relative;padding:6px 0}
+.gnav a .en{display:block;font-size:9px;color:var(--blue-l);font-weight:600;letter-spacing:.16em}
+.gnav a:hover{color:var(--blue)}
+.gnav a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--blue);transition:.25s}.gnav a:hover::after{width:100%}
+.head-cta{display:flex;align-items:center;gap:16px}
+.head-tel{text-align:right;line-height:1.2}.head-tel small{font-size:11px;color:var(--sub)}
+.head-tel b{font-family:var(--mincho);font-weight:600;font-size:20px;color:var(--blue-d);display:block;letter-spacing:.02em}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer}.burger span{width:26px;height:2px;background:var(--blue-d)}
+
+/* HERO : 明るい白〜スカイ基調 */
+.hero{position:relative;min-height:640px;display:flex;align-items:center;background:linear-gradient(120deg,#ffffff 0%,#edf4fc 50%,#dcebfa 100%);overflow:hidden}
+.hero::before{content:"";position:absolute;top:0;right:0;height:100%;width:54%;background:linear-gradient(150deg,var(--gold-l),var(--gold));clip-path:polygon(15% 0,100% 0,100% 100%,5% 100%);z-index:1}
+.hero-img{position:absolute;top:0;right:0;height:100%;width:52%;clip-path:polygon(18% 0,100% 0,100% 100%,8% 100%);z-index:2;overflow:hidden}
+.hero-img img{width:100%;height:100%;object-fit:cover}
+.hero-img::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,rgba(15,79,140,.3),transparent 38%)}
+.hero-badge{position:absolute;z-index:4;left:53%;bottom:54px;background:#fff;padding:16px 22px;border-top:3px solid var(--gold);box-shadow:0 26px 52px -22px rgba(15,79,140,.5);border-radius:2px}
+.hero-badge .hc-en{display:block;font-family:var(--sans);font-size:10px;letter-spacing:.2em;color:var(--gold-d);font-weight:600}
+.hero-badge strong{display:block;font-family:var(--mincho);font-weight:700;color:var(--blue-d);font-size:32px;line-height:1;margin-top:5px}
+.hero-badge strong em{font-style:normal;font-size:15px;color:var(--gold-d);margin-left:3px}
+.hero-badge small{display:block;font-size:11px;color:var(--sub);margin-top:5px;letter-spacing:.04em}
+.hero-in{position:relative;z-index:3;width:min(1200px,92%);margin:0 auto;padding:60px 0}
+.hero-l{position:relative;width:46%;max-width:540px}
+.hero-rail{position:absolute;left:-2px;top:6px;height:120px;width:2px;background:linear-gradient(var(--gold),transparent)}
+.hero-tag{font-family:var(--sans);font-size:12px;letter-spacing:.32em;color:var(--blue);font-weight:600;margin-bottom:26px;padding-left:6px}
+.hero-l h1{font-family:var(--mincho);font-weight:800;font-size:clamp(32px,4.4vw,54px);line-height:1.44;letter-spacing:.04em;color:var(--blue-d)}
+.hero-l h1 .hl{display:block;white-space:nowrap}
+.hero-l h1 .o{color:var(--gold-d)}
+.hero-l .kl{width:64px;height:2px;background:var(--gold);margin:30px 0}
+.hero-l p{color:#46586a;font-size:16px;max-width:480px;margin-bottom:36px;line-height:2}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+.hero-svc{display:flex;margin-top:44px;padding-top:24px;border-top:1px solid #cfe0f0}
+.hero-svc div{flex:1;border-left:1px solid #cfe0f0;padding-left:18px}.hero-svc div:first-child{border-left:none;padding-left:0}
+.hero-svc b{display:block;font-family:var(--mincho);font-weight:600;color:var(--blue-d);font-size:17px;letter-spacing:.06em}
+.hero-svc span{font-family:var(--sans);font-size:10px;letter-spacing:.16em;color:var(--blue-l)}
+/* HEROの画像は冒頭の .hero-img（斜めインターロック）を参照 */
+
+.sec{padding:106px 0}
+.bg-white{background:var(--white)}.bg-sky{background:var(--sky2)}
+
+/* STRENGTHS : 小さな明朝インデックス＋縦罫 */
+.stance{margin-top:54px}
+.stance .row{display:grid;grid-template-columns:96px 1fr 56px;gap:36px;align-items:start;padding:38px 6px;border-top:1px solid var(--line);position:relative;transition:.3s}
+.stance .row:last-child{border-bottom:1px solid var(--line)}
+.stance .row::after{content:"";position:absolute;left:0;top:0;height:0;width:2px;background:var(--gold);transition:.5s cubic-bezier(.2,.7,.2,1)}
+.stance .row:hover::after{height:100%}.stance .row:hover{background:var(--sky2)}
+.stance .idx{display:flex;flex-direction:column;gap:8px}
+.stance .idx .n{font-family:var(--mincho);font-weight:600;font-size:30px;color:var(--gold-d);line-height:1}
+.stance .idx .bar{width:30px;height:1px;background:var(--mist)}
+.stance .body h3{font-family:var(--mincho);color:var(--blue-d);font-size:clamp(20px,2.3vw,24px);margin-bottom:10px;letter-spacing:.04em}
+.stance .body p{color:var(--sub);font-size:14.5px;max-width:660px}
+.stance .ico{width:54px;height:54px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;color:var(--blue);transition:.3s}
+.stance .row:hover .ico{border-color:var(--gold);color:var(--gold)}
+
+/* SERVICE : 交互ジグザグ（偶数列は鮮やかブルー面） */
+.zig{margin-top:60px;display:flex;flex-direction:column}
+.zrow{display:grid;grid-template-columns:1fr 1fr;align-items:stretch;min-height:430px}
+.zrow .zimg{position:relative;overflow:hidden}.zrow .zimg img{width:100%;height:100%;object-fit:cover;transition:.7s}.zrow:hover .zimg img{transform:scale(1.05)}
+.zrow .zimg .zno{position:absolute;left:24px;top:14px;font-family:var(--mincho);font-weight:700;font-size:clamp(64px,8vw,108px);line-height:1;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.85)}
+.zrow .ztext{background:var(--white);padding:64px 8%;display:flex;flex-direction:column;justify-content:center}
+.zrow:nth-child(even){direction:rtl}
+.zrow:nth-child(even) .ztext{direction:ltr;background:linear-gradient(150deg,var(--blue),var(--blue-d));color:#fff}
+.zrow:nth-child(even) .ztext h3{color:#fff}.zrow:nth-child(even) .ztext p{color:#e3eefb}
+.zrow:nth-child(even) .ztext .ztag{color:var(--gold-l)}.zrow:nth-child(even) .ztext .zmore{color:#fff}
+.ztext .ztag{font-family:var(--sans);font-size:11px;letter-spacing:.24em;font-weight:600;color:var(--blue)}
+.ztext h3{font-family:var(--mincho);font-size:clamp(24px,3vw,33px);color:var(--blue-d);margin:14px 0 16px;letter-spacing:.05em}
+.ztext p{color:var(--sub);font-size:15px;max-width:440px}
+.ztext .zlist{margin:20px 0 28px;display:flex;flex-wrap:wrap;gap:8px}
+.ztext .zlist span{font-family:var(--sans);font-size:12px;border:1px solid currentColor;opacity:.6;border-radius:1px;padding:4px 13px}
+.ztext .zmore{font-family:var(--sans);font-weight:600;font-size:14px;letter-spacing:.04em;color:var(--blue);display:inline-flex;gap:8px;align-items:center}.zrow:hover .zmore{gap:14px}
+
+/* RESULTS : 明るいブルー帯＋明朝数字 */
+.results{position:relative;background:linear-gradient(135deg,var(--blue) 0%,#2a86d8 55%,var(--blue-l) 120%);color:#fff;padding:104px 0;overflow:hidden}
+.results::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.1) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.1) 1px,transparent 1px);background-size:48px 48px;opacity:.5}
+.results .container{position:relative;z-index:2}
+.results .sec-title{color:#fff}
+.statgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:0 48px;margin-top:50px}
+.statgrid .it{display:flex;flex-direction:column;padding:24px 0;border-top:2px solid rgba(255,255,255,.4)}
+.statgrid .n{font-family:var(--mincho);font-weight:700;font-size:clamp(46px,5.5vw,66px);line-height:1;color:#fff}
+.statgrid .n em{font-style:normal;font-size:22px;color:var(--gold-l);margin-left:6px}
+.statgrid .lbl{color:#dcebfb;font-size:14px;margin-top:12px}
+.results .note{margin-top:30px;font-size:12px;color:#cfe2f7}
+.fac-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:54px}
+.fac{position:relative;border-radius:3px;overflow:hidden;height:200px}
+.fac img{width:100%;height:100%;object-fit:cover;transition:.6s}.fac:hover img{transform:scale(1.06)}
+.fac .cap{position:absolute;inset:0;background:linear-gradient(transparent 45%,rgba(15,79,140,.85));display:flex;align-items:flex-end;padding:18px;color:#fff;font-family:var(--mincho);font-weight:600;letter-spacing:.04em}
+
+/* QUALITY : 横タイムライン */
+.flow{display:grid;grid-template-columns:repeat(5,1fr);margin-top:58px;position:relative}
+.flow::before{content:"";position:absolute;left:6%;right:6%;top:29px;height:1px;background:var(--mist)}
+.flow .step{text-align:center;position:relative;padding:0 14px}
+.flow .dot{width:58px;height:58px;border-radius:50%;border:1px solid var(--blue);background:#fff;color:var(--blue);display:grid;place-items:center;margin:0 auto 18px;font-family:var(--mincho);font-weight:600;font-size:20px;position:relative;z-index:2;transition:.3s}
+.flow .step:hover .dot{background:var(--gold);border-color:var(--gold);color:#fff;transform:translateY(-4px)}
+.flow .step h4{font-family:var(--mincho);color:var(--blue-d);font-size:16px;margin-bottom:6px;letter-spacing:.03em}
+.flow .step p{color:var(--sub);font-size:13px}
+
+/* NEWS */
+.news-wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;margin-top:48px;align-items:start}
+.feat{background:linear-gradient(150deg,var(--blue),var(--blue-d));color:#fff;padding:40px;position:relative;overflow:hidden;min-height:280px;display:flex;flex-direction:column;justify-content:flex-end;border-top:3px solid var(--gold);border-radius:3px}
+.feat .cat{font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--gold-l);font-weight:600}
+.feat .date{color:#dcebfb;font-size:13px;margin:14px 0 8px;font-family:var(--mincho)}
+.feat h3{font-family:var(--mincho);font-size:22px;line-height:1.6;letter-spacing:.04em}
+.newslist a{display:grid;grid-template-columns:108px 78px 1fr auto;gap:18px;align-items:center;padding:20px 6px;border-bottom:1px solid var(--line);transition:.2s}
+.newslist a:hover{background:var(--sky2);padding-left:14px}
+.newslist .date{font-family:var(--mincho);font-weight:600;color:var(--blue);font-size:15px}
+.newslist .cat{font-family:var(--sans);font-size:11px;font-weight:600;color:var(--gold-d);border:1px solid var(--gold);border-radius:1px;padding:3px 0;text-align:center}
+.newslist .ttl{font-size:14.5px}.newslist .arw{color:var(--mist)}
+
+/* RECRUIT : 明るいブルーパネル */
+.recruit{position:relative;min-height:420px;display:grid;grid-template-columns:1fr 1fr;overflow:hidden}
+.recruit .rimg{position:relative;overflow:hidden}.recruit .rimg img{width:100%;height:100%;object-fit:cover}
+.recruit .rtext{background:linear-gradient(150deg,var(--blue),var(--blue-d));color:#fff;display:flex;flex-direction:column;justify-content:center;padding:72px 7%;position:relative}
+.recruit .rtext::before{content:"";position:absolute;left:-60px;top:0;bottom:0;width:120px;background:var(--blue);transform:skewX(-9deg)}
+.recruit .rtext>*{position:relative}
+.recruit .eyebrow{color:var(--gold-l)}.recruit .eyebrow::before{background:var(--gold-l)}
+.recruit h2{font-family:var(--mincho);font-size:clamp(28px,3.6vw,42px);margin:16px 0 14px;letter-spacing:.05em;color:#fff}
+.recruit p{color:#e3eefb;max-width:480px;margin-bottom:30px}
+
+/* CTA : ゴールドの暖色アクセント */
+.cta{background:var(--gold);color:#fff;text-align:center;padding:90px 20px;position:relative;overflow:hidden}
+.cta::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 140% at 50% -20%,rgba(255,255,255,.18),transparent 60%)}
+.cta>*{position:relative}
+.cta h2{font-family:var(--mincho);font-size:clamp(28px,3.6vw,42px);margin-bottom:12px;letter-spacing:.05em}
+.cta p{color:#fff7ec;margin-bottom:6px}
+.cta .tel{font-family:var(--mincho);font-weight:700;font-size:clamp(36px,5vw,54px);margin:8px 0 4px;letter-spacing:.04em}
+.cta .hours{font-size:13px;color:#fff3e2;margin-bottom:28px}
+.cta .btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.cta .btn{background:#fff;color:var(--blue-d)}.cta .btn:hover{background:var(--blue-d);color:#fff;transform:translateY(-2px)}
+
+/* footer */
+.footer{background:var(--navy);color:#a9bccf;padding:74px 0 30px;font-size:13.5px}
+.foot-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:36px}
+.foot-brand .logo-w{font-family:var(--mincho);font-weight:700;font-size:22px;color:#fff;letter-spacing:.06em}
+.foot-brand .logo-w span{display:block;font-family:var(--sans);font-size:11px;color:var(--gold-l);letter-spacing:.2em;margin-top:6px}
+.foot-brand p{margin-top:18px;line-height:1.95}
+.foot-col h4{font-family:var(--mincho);color:#fff;font-size:15px;margin-bottom:16px;letter-spacing:.04em}
+.foot-col a{display:block;color:#a9bccf;padding:6px 0;transition:.2s}.foot-col a:hover{color:var(--gold-l);padding-left:5px}
+.foot-bottom{margin-top:48px;border-top:1px solid #25405c;padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:12px;color:#7d92a8}
+.foot-bottom a{color:#7d92a8}
+
+.rv{opacity:0;transform:translateY(30px);transition:.8s cubic-bezier(.2,.7,.2,1)}.rv.in{opacity:1;transform:none}
+
+@media(max-width:960px){
+  .gnav,.head-tel{display:none}.burger{display:flex}
+  .hero{flex-direction:column;min-height:auto;align-items:stretch}
+  .hero::before,.hero-badge{display:none}
+  .hero-img{position:static;width:100%;height:230px;clip-path:none}
+  .hero-in{padding:34px 0 60px}.hero-l{width:100%;max-width:none}
+  .stance .row{grid-template-columns:60px 1fr;gap:20px}.stance .ico{display:none}
+  .zrow,.recruit{grid-template-columns:1fr}.zrow{min-height:auto}.zrow:nth-child(even){direction:ltr}
+  .zrow .zimg{min-height:240px}.ztext{padding:44px 7%}
+  .recruit .rtext::before{display:none}.recruit .rimg{min-height:260px}
+  .statgrid{grid-template-columns:1fr}.fac-strip{grid-template-columns:1fr}
+  .flow{grid-template-columns:1fr 1fr}.flow::before{display:none}
+  .news-wrap{grid-template-columns:1fr}.foot-top{grid-template-columns:1fr 1fr}
+}
+@media(max-width:560px){.sec{padding:68px 0}.flow{grid-template-columns:1fr}.newslist a{grid-template-columns:90px 1fr}.newslist .cat,.newslist .arw{display:none}}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="container header-in">
+    <a class="brand" href="./ロハスカンパニー_デザイン案.html"><img src="./images/lohas-newlogo-400x81.png" alt="ロハスカンパニー株式会社" /></a>
+    <nav class="gnav">
+      <a href="./ロハスカンパニー_サービス.html"><span class="en">SERVICE</span>業務内容</a>
+      <a href="./ロハスカンパニー_デザイン案.html#quality"><span class="en">QUALITY</span>管理品質</a>
+      <a href="./ロハスカンパニー_会社情報.html"><span class="en">COMPANY</span>会社情報</a>
+      <a href="./ロハスカンパニー_採用.html"><span class="en">RECRUIT</span>採用情報</a>
+      <a href="./ロハスカンパニー_お問い合わせ.html"><span class="en">CONTACT</span>お問い合わせ</a>
+    </nav>
+    <div class="head-cta">
+      <div class="head-tel"><small>お電話でのご相談</small><b>03-6821-4621</b></div>
+      <a class="btn blue" href="./ロハスカンパニー_お問い合わせ.html">お問い合わせ</a>
+      <div class="burger" onclick="var g=document.querySelector('.gnav');g.style.display=(getComputedStyle(g).display==='none'?'flex':'none')"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-img"><img src="./images/MV07_オープンオフィス執務風景_OFFICE-WORK.png" alt="清潔に管理された明るいオフィス空間" /></div>
+  <div class="hero-badge"><span class="hc-en">ONE-STOP</span><strong>3<em>領域</em></strong><small>清掃・衛生・設備</small></div>
+  <div class="hero-in">
+    <div class="hero-l">
+      <div class="hero-rail"></div>
+      <div class="hero-tag">FACILITY MANAGEMENT — GINZA, TOKYO</div>
+      <h1><span class="hl">現場の確かさと、</span><span class="hl o">変わらぬ信頼</span></h1>
+      <div class="kl"></div>
+      <p>建物を清潔・安全・快適に保ち続ける。清掃・衛生・設備の三つの管理で、施設の価値とそこで過ごす人々の毎日を、私たちが支えます。</p>
+      <div class="hero-btns">
+        <a class="btn blue" href="./ロハスカンパニー_サービス.html">業務内容を見る</a>
+        <a class="btn ghost" href="./ロハスカンパニー_お問い合わせ.html">無料相談する</a>
+      </div>
+      <div class="hero-svc">
+        <div><b>清掃管理</b><span>CLEANING</span></div>
+        <div><b>衛生管理</b><span>SANITATION</span></div>
+        <div><b>設備管理</b><span>FACILITY</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STRENGTHS -->
+<section class="sec bg-white">
+  <div class="container">
+    <div class="eyebrow">Our Promise</div>
+    <h2 class="sec-title">私たちが選ばれる、三つの管理姿勢</h2>
+    <p class="lead">ビルメンテナンスは、長く付き合うパートナー選び。だからこそ私たちは、目に見えにくい仕事の一つひとつに、信頼の根拠を持っています。</p>
+    <div class="stance">
+      <div class="row rv">
+        <div class="idx"><span class="n fig">01</span><span class="bar"></span></div>
+        <div class="body"><h3>一貫した品質基準</h3><p>清掃・衛生・設備のすべてに自社の管理基準を設定。担当者が替わっても品質がぶれない、標準化された仕組みで運用します。</p></div>
+        <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+      </div>
+      <div class="row rv">
+        <div class="idx"><span class="n fig">02</span><span class="bar"></span></div>
+        <div class="body"><h3>記録と報告の透明性</h3><p>点検・作業の結果は記録し、定期的にレポート。「何を、いつ、どう管理したか」が見えるから、安心してお任せいただけます。</p></div>
+        <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 3v18h18"/><path d="M7 14l3-3 3 2 5-6"/></svg></div>
+      </div>
+      <div class="row rv">
+        <div class="idx"><span class="n fig">03</span><span class="bar"></span></div>
+        <div class="body"><h3>止めない緊急対応</h3><p>設備トラブルや衛生の不安に、迅速に対応する体制を整備。建物の機能を止めないことが、施設運営の信頼につながります。</p></div>
+        <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE -->
+<section class="sec bg-sky" style="padding-bottom:0">
+  <div class="container">
+    <div class="eyebrow">Service</div>
+    <h2 class="sec-title">事業領域 ― 三つの管理</h2>
+    <p class="lead">清掃・衛生・設備。建物を支える三つの専門領域を、ひとつの会社でワンストップに。各業務の詳細は専用ページでご確認いただけます。</p>
+  </div>
+  <div class="zig">
+    <a class="zrow rv" href="./ロハスカンパニー_サービス詳細.html#cleaning">
+      <div class="zimg"><span class="zno fig">01</span><img src="./images/MV07_オープンオフィス執務風景_OFFICE-WORK.png" alt="清掃管理業務"/></div>
+      <div class="ztext"><div class="ztag">CLEANING</div><h3>清掃管理業務</h3>
+        <p>日常清掃から定期清掃・床面の特殊洗浄まで。美観と衛生環境を維持し、訪れる人の第一印象を整えます。</p>
+        <div class="zlist"><span>日常清掃</span><span>定期清掃</span><span>床面特殊洗浄</span><span>ガラス・外装</span></div>
+        <span class="zmore">詳細を見る →</span></div>
+    </a>
+    <a class="zrow rv" href="./ロハスカンパニー_サービス詳細.html#sanitation">
+      <div class="zimg"><span class="zno fig">02</span><img src="./images/MV03_高層会議室と都市眺望_OFFICE-ARCHITECTURE.png" alt="衛生管理業務"/></div>
+      <div class="ztext"><div class="ztag">SANITATION</div><h3>衛生管理業務</h3>
+        <p>給排水・空調環境の衛生管理、衛生用品の供給まで。目に見えない清潔を、専門知識で維持します。</p>
+        <div class="zlist"><span>貯水槽清掃</span><span>空気環境測定</span><span>害虫防除</span><span>衛生用品供給</span></div>
+        <span class="zmore">詳細を見る →</span></div>
+    </a>
+    <a class="zrow rv" href="./ロハスカンパニー_サービス詳細.html#facility">
+      <div class="zimg"><span class="zno fig">03</span><img src="./images/MV19_ロビーを歩くチーム_PEOPLE-LOBBY.png" alt="設備管理業務"/></div>
+      <div class="ztext"><div class="ztag">FACILITY</div><h3>設備管理業務</h3>
+        <p>電気・空調・給排水など建物設備の点検・保守・運転監視。トラブルを未然に防ぎ、長寿命化を図ります。</p>
+        <div class="zlist"><span>電気設備</span><span>空調設備</span><span>給排水</span><span>運転監視</span></div>
+        <span class="zmore">詳細を見る →</span></div>
+    </a>
+  </div>
+</section>
+
+<!-- RESULTS（確認できる事実に限定） -->
+<section class="results">
+  <div class="container">
+    <div class="eyebrow" style="color:var(--gold-l)">Our Strength</div>
+    <h2 class="sec-title">ワンストップで、建物の毎日を支える</h2>
+    <p class="lead" style="color:#dcebfb">清掃・衛生・設備の三領域を一社で。東京・銀座を拠点に、施設の安心を止めない体制を整えています。</p>
+    <div class="statgrid">
+      <div class="it"><span class="n">2007<em>〜</em></span><span class="lbl">ビルメンテナンス事業を展開</span></div>
+      <div class="it"><span class="n">3<em>領域</em></span><span class="lbl">清掃・衛生・設備の総合管理</span></div>
+      <div class="it"><span class="n">1<em>窓口</em></span><span class="lbl">建物まるごとワンストップ対応</span></div>
+    </div>
+    <p class="note">※ 創業年・事業内容は公開情報に基づく。管理実績件数等の具体数値は、確定のうえ掲載します。</p>
+    <div class="fac-strip">
+      <div class="fac"><img src="./images/MV03_高層会議室と都市眺望_OFFICE-ARCHITECTURE.png" alt="オフィスビル"/><div class="cap">オフィスビル</div></div>
+      <div class="fac"><img src="./images/MV07_オープンオフィス執務風景_OFFICE-WORK.png" alt="商業・複合施設"/><div class="cap">商業・複合施設</div></div>
+      <div class="fac"><img src="./images/MV19_ロビーを歩くチーム_PEOPLE-LOBBY.png" alt="医療・公共施設"/><div class="cap">医療・公共施設</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- QUALITY -->
+<section class="sec bg-white" id="quality">
+  <div class="container">
+    <div class="eyebrow">Quality</div>
+    <h2 class="sec-title">管理品質へのこだわり</h2>
+    <p class="lead">ビルメンテナンスの価値は“見えないところ”にあります。私たちは管理のプロセスそのものを体系化し、品質を仕組みで担保します。</p>
+    <div class="flow">
+      <div class="step"><div class="dot fig">01</div><h4>現地調査・診断</h4><p>建物の状態と課題を可視化</p></div>
+      <div class="step"><div class="dot fig">02</div><h4>管理計画の策定</h4><p>施設に最適な仕様を設計</p></div>
+      <div class="step"><div class="dot fig">03</div><h4>定期点検・清掃</h4><p>基準に沿った確実な実行</p></div>
+      <div class="step"><div class="dot fig">04</div><h4>記録・報告</h4><p>結果をレポートで透明化</p></div>
+      <div class="step"><div class="dot fig">05</div><h4>改善提案</h4><p>次の最適化へ継続改善</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWS -->
+<section class="sec bg-sky">
+  <div class="container">
+    <div class="eyebrow">News</div>
+    <h2 class="sec-title">お知らせ</h2>
+    <div class="news-wrap">
+      <a class="feat rv" href="#">
+        <div class="cat">PICK UP</div><div class="date">2026.06.10</div>
+        <h3>夏季の空調設備点検キャンペーンを開始しました。</h3>
+      </a>
+      <div class="newslist">
+        <a href="#"><span class="date">2026.05.22</span><span class="cat">実績</span><span class="ttl">都内オフィスビルの総合管理業務を新たに受託しました。</span><span class="arw">→</span></a>
+        <a href="#"><span class="date">2026.04.01</span><span class="cat">採用</span><span class="ttl">2027年度 新卒・中途採用のエントリー受付を開始しました。</span><span class="arw">→</span></a>
+        <a href="#"><span class="date">2026.03.15</span><span class="cat">お知らせ</span><span class="ttl">衛生管理に関する社内研修プログラムを刷新しました。</span><span class="arw">→</span></a>
+        <a href="#"><span class="date">2026.02.20</span><span class="cat">お知らせ</span><span class="ttl">年末年始の営業体制についてのご案内。</span><span class="arw">→</span></a>
+        <div style="margin-top:26px"><a class="btn line-b" href="#">お知らせ一覧へ →</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RECRUIT -->
+<section class="recruit rv">
+  <div class="rimg"><img src="./images/MV08_ロビーを歩く5人チーム_PEOPLE-GROUP.png" alt="ロハスカンパニーで働く仲間"/></div>
+  <div class="rtext">
+    <div class="eyebrow">Recruit</div>
+    <h2>人が、品質をつくる。</h2>
+    <p>建物を支えているのは、現場の一人ひとり。ロハスカンパニーは、誠実に仕事と向き合う仲間を募集しています。未経験からの育成体制も整えています。</p>
+    <div><a class="btn gold" href="./ロハスカンパニー_採用.html">採用情報を見る</a></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>施設管理のご相談は、お気軽に。</h2>
+  <p>お見積り・現地調査は無料です。まずはお話をお聞かせください。</p>
+  <div class="tel">03-6821-4621</div>
+  <div class="hours">ロハスカンパニー株式会社（東京都中央区銀座）</div>
+  <div class="btns">
+    <a class="btn" href="./ロハスカンパニー_お問い合わせ.html">お問い合わせフォーム</a>
+    <a class="btn" href="./ロハスカンパニー_サービス.html">資料・サービスを見る</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <div class="logo-w">LOHAS COMPANY<span>FACILITY MANAGEMENT</span></div>
+        <p>ロハスカンパニー株式会社<br>〒104-0061 東京都中央区銀座1-22-11 銀座大竹ビジデンス2F<br>TEL 03-6821-4621</p>
+      </div>
+      <div class="foot-col"><h4>業務内容</h4>
+        <a href="./ロハスカンパニー_サービス詳細.html#cleaning">清掃管理業務</a>
+        <a href="./ロハスカンパニー_サービス詳細.html#sanitation">衛生管理業務</a>
+        <a href="./ロハスカンパニー_サービス詳細.html#facility">設備管理業務</a>
+        <a href="./ロハスカンパニー_デザイン案.html#quality">管理品質について</a>
+      </div>
+      <div class="foot-col"><h4>会社情報</h4>
+        <a href="./ロハスカンパニー_会社情報.html#message">代表メッセージ</a>
+        <a href="./ロハスカンパニー_会社情報.html#profile">会社概要</a>
+        <a href="./ロハスカンパニー_会社情報.html#history">沿革</a>
+        <a href="./ロハスカンパニー_会社情報.html#access">アクセス</a>
+      </div>
+      <div class="foot-col"><h4>その他</h4>
+        <a href="./ロハスカンパニー_採用.html">採用情報</a>
+        <a href="#">お知らせ</a>
+        <a href="./ロハスカンパニー_お問い合わせ.html">お問い合わせ</a>
+        <a href="#">個人情報保護方針</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 LOHAS COMPANY Co., Ltd. All Rights Reserved.</span>
+      <span><a href="#">個人情報保護方針</a> ／ <a href="#">サイトマップ</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

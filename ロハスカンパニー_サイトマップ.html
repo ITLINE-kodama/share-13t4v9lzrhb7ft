@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>サイトマップ ｜ ロハスカンパニー株式会社</title>
+<meta name="description" content="ロハスカンパニー株式会社 コーポレートサイトリニューアルのサイトマップ（サイト構成図）。清掃・衛生・設備の総合ビルメンテナンス。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700;800&family=Murecho:wght@300;400;500;600&family=IBM+Plex+Sans+JP:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#1f73c7;--blue-d:#0f4f8c;--blue-l:#5aa0e0;--sky:#e9f3fc;--sky2:#f3f9fe;--navy:#122c47;--gold:#caa83f;--gold-d:#9c7c20;--gold-l:#ecd9a0;--paper:#f6faff;--white:#fff;--ink:#1d2b3a;--sub:#5e6c7a;--line:#e1eaf3;--mist:#b8c6d6;--mincho:"Shippori Mincho",serif;--sans:"IBM Plex Sans JP",sans-serif;--body:"Murecho",sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);color:var(--ink);background:var(--paper);line-height:1.9;font-size:15px;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--mincho);font-weight:700;line-height:1.4;letter-spacing:.03em}
+a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
+.container{width:min(1120px,92%);margin:0 auto}
+.eyebrow{font-family:var(--sans);font-size:12.5px;font-weight:600;letter-spacing:.24em;color:var(--blue);text-transform:uppercase;display:inline-flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";width:32px;height:1px;background:var(--blue)}
+/* header */
+.header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.header-in{height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand img{height:40px;width:auto}
+.gnav{display:flex;gap:30px;align-items:center}
+.gnav a{font-family:var(--sans);font-weight:600;font-size:14px;position:relative;padding:6px 0}
+.gnav a .en{display:block;font-size:9px;color:var(--blue-l);font-weight:600;letter-spacing:.14em}
+.gnav a:hover{color:var(--blue)}
+.head-cta{display:flex;align-items:center;gap:16px}
+.head-tel{text-align:right;line-height:1.2}.head-tel small{font-size:11px;color:var(--sub)}
+.head-tel b{font-family:var(--mincho);font-weight:600;font-size:20px;color:var(--blue-d);display:block}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 26px;border-radius:2px;font-family:var(--sans);font-weight:600;font-size:14px;background:var(--blue);color:#fff;transition:.25s}
+.btn:hover{background:var(--blue-d);transform:translateY(-2px)}
+.burger{display:none}
+/* sub */
+.sub{background:linear-gradient(140deg,#1f73c7,#0f4f8c);color:#fff;padding:60px 0 56px;position:relative;overflow:hidden}
+.sub::after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:44px 44px}
+.sub .container{position:relative;z-index:1}
+.sub .eyebrow{color:var(--gold-l)}.sub .eyebrow::before{background:var(--gold-l)}
+.sub h1{font-size:clamp(28px,3.8vw,42px);margin:14px 0 10px;color:#fff}
+.sub p{color:#dbe9f7;max-width:680px;font-weight:300}
+main{padding:64px 0 76px}
+/* tree */
+.tree{list-style:none}
+.node{background:#fff;border:1px solid var(--line);border-left:4px solid var(--blue);border-radius:8px;padding:16px 22px;margin:0 0 12px;display:flex;align-items:baseline;gap:16px;box-shadow:0 1px 3px rgba(20,40,90,.05)}
+.node .nm{font-family:var(--mincho);font-weight:700;font-size:17px;min-width:170px;color:var(--blue-d)}
+.node .en{font-family:var(--sans);font-size:10px;letter-spacing:.16em;color:var(--gold-d);font-weight:600;display:block;margin-top:2px}
+.node .ro{color:var(--sub);font-size:13.5px}
+.node.top{border-left-color:var(--gold);background:linear-gradient(120deg,var(--blue),var(--blue-d));color:#fff}
+.node.top .nm{color:#fff}.node.top .en{color:var(--gold-l)}.node.top .ro{color:#dbe9f7}
+.children{list-style:none;margin:0 0 18px 28px;padding-left:26px;border-left:2px dashed #bcd7ee}
+.children>li{position:relative;margin:0 0 12px}
+.children>li::before{content:"";position:absolute;left:-27px;top:28px;width:24px;height:2px;background:#bcd7ee}
+.sub-children{list-style:none;margin:8px 0 0 26px;padding-left:22px;border-left:2px dashed #d8e6f3}
+.sub-children>li{position:relative;margin:8px 0}
+.sub-children>li::before{content:"";position:absolute;left:-23px;top:50%;width:18px;height:1px;background:#d8e6f3}
+.subnode{background:var(--sky2);border:1px solid var(--line);border-radius:6px;padding:11px 18px;display:flex;align-items:baseline;gap:14px}
+.subnode .nm{font-family:var(--mincho);font-weight:600;font-size:15px;color:var(--blue-d);min-width:140px}
+.subnode .ro{color:var(--sub);font-size:13px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.tag{font-family:var(--sans);font-size:11.5px;background:var(--sky);color:var(--blue-d);border:1px solid #bcd7ee;border-radius:999px;padding:3px 12px}
+.note{margin-top:30px;background:var(--sky2);border:1px solid #bcd7ee;border-radius:10px;padding:18px 22px;font-size:13.5px;color:var(--sub)}
+.note b{color:var(--blue-d)}
+/* footer */
+.footer{background:var(--navy);color:#a9bccf;padding:48px 0 28px;font-size:13px;margin-top:10px}
+.footer .container{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px}
+.footer .lw{font-family:var(--mincho);font-weight:700;font-size:20px;color:#fff;letter-spacing:.05em}
+.footer .lw span{display:block;font-family:var(--sans);font-size:10px;color:var(--gold-l);letter-spacing:.18em;margin-top:5px}
+.footer p{margin-top:12px;line-height:1.85}
+.footer small{color:#7d92a8;font-size:12px}
+@media(max-width:780px){.gnav,.head-tel,.head-cta .btn{display:none}.node,.subnode{flex-direction:column;gap:4px}.node .nm,.subnode .nm{min-width:0}.children{margin-left:10px;padding-left:16px}}
+</style>
+</head>
+<body>
+<header class="header"><div class="container header-in">
+  <a class="brand" href="./ロハスカンパニー_デザイン案.html"><img src="./images/lohas-newlogo-400x81.png" alt="ロハスカンパニー株式会社"></a>
+  <nav class="gnav">
+    <a href="./ロハスカンパニー_サービス.html"><span class="en">SERVICE</span>業務内容</a>
+    <a href="./ロハスカンパニー_デザイン案.html#quality"><span class="en">QUALITY</span>管理品質</a>
+    <a href="./ロハスカンパニー_会社情報.html"><span class="en">COMPANY</span>会社情報</a>
+    <a href="./ロハスカンパニー_採用.html"><span class="en">RECRUIT</span>採用情報</a>
+    <a href="./ロハスカンパニー_お問い合わせ.html"><span class="en">CONTACT</span>お問い合わせ</a>
+  </nav>
+  <div class="head-cta"><div class="head-tel"><small>お電話でのご相談</small><b>03-6821-4621</b></div><a class="btn" href="./ロハスカンパニー_お問い合わせ.html">お問い合わせ</a></div>
+</div></header>
+
+<section class="sub"><div class="container">
+  <span class="eyebrow">Site Map</span>
+  <h1>サイトマップ（サイト構成図）</h1>
+  <p>現行サイトの5本柱（TOP／会社情報／業務内容／採用／お問い合わせ）を土台に、信頼形成を強化して再設計したサイト構成です。共通のヘッダー・フッター・CTAを固定し、各ページへ横展開します。</p>
+</div></section>
+
+<main><div class="container">
+  <ul class="tree">
+    <li>
+      <div class="node top"><span class="nm">ホーム<span class="en">HOME / TOP</span></span><span class="ro">企業の信頼を伝えるファーストビュー＋3業務サマリー／実績／お知らせ／採用・CTA</span></div>
+      <ul class="children">
+        <li>
+          <div class="node"><span class="nm">業務内容<span class="en">SERVICE</span></span><span class="ro">清掃・衛生・設備の3業務を比較できる一覧。各詳細へ送客</span></div>
+          <ul class="sub-children">
+            <li><div class="subnode"><span class="nm">サービス詳細</span><span class="ro">各業務の特長／対応範囲／導入フロー／FAQ（清掃・衛生・設備の各テンプレート）</span></div></li>
+          </ul>
+        </li>
+        <li><div class="node"><span class="nm">管理品質<span class="en">QUALITY</span></span><span class="ro">調査→計画→点検→記録・報告→改善の管理プロセスを体系化して可視化</span></div></li>
+        <li>
+          <div class="node"><span class="nm">会社情報<span class="en">COMPANY</span></span><span class="ro">代表メッセージ／会社概要／沿革／アクセス</span></div>
+          <div class="tags"><span class="tag">代表メッセージ</span><span class="tag">会社概要</span><span class="tag">沿革</span><span class="tag">アクセス</span></div>
+        </li>
+        <li>
+          <div class="node"><span class="nm">採用情報<span class="en">RECRUIT</span></span><span class="ro">仕事紹介／働く環境／募集要項。未経験歓迎・育成体制を広報</span></div>
+          <div class="tags"><span class="tag">仕事紹介</span><span class="tag">働く環境</span><span class="tag">募集要項</span></div>
+        </li>
+        <li><div class="node"><span class="nm">お知らせ<span class="en">NEWS</span></span><span class="ro">実績・キャンペーン・採用情報などのニュース一覧／詳細</span></div></li>
+        <li><div class="node"><span class="nm">お問い合わせ<span class="en">CONTACT</span></span><span class="ro">種別選択＋フォーム＋電話導線（03-6821-4621）＋完了画面</span></div></li>
+      </ul>
+    </li>
+  </ul>
+  <p class="note">※ 共通部品（ヘッダー／グローバルナビ／追従CTA／フッター）を全ページで固定し、更新性と一貫性を担保します。<b>「管理品質」「お知らせ」</b>はトップ内のセクションとしても展開し、回遊を促します。</p>
+</div></main>
+
+<footer class="footer"><div class="container">
+  <div>
+    <div class="lw">LOHAS COMPANY<span>FACILITY MANAGEMENT</span></div>
+    <p>ロハスカンパニー株式会社<br>〒104-0061 東京都中央区銀座1-22-11 銀座大竹ビジデンス2F<br>TEL 03-6821-4621</p>
+  </div>
+  <small>© 2026 LOHAS COMPANY Co., Ltd. — Sitemap / Design Proposal by ITLINE</small>
+</div></footer>
+</body>
+</html>
